@@ -1,0 +1,33 @@
+{
+  "name": "keycloak-theme-justregular",
+  "version": "1.0.0",
+  "description": "Custom Keycloak theme with shadcn-style components",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "build-keycloak-theme": "npm run build && keycloakify",
+    "storybook": "storybook dev -p 6006",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "keycloakify": "^11.8.0",
+    "lucide-react": "^0.562.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^3.4.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.18",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.5.1",
+    "tailwindcss": "^4.1.18",
+    "typescript": "^5.9.3",
+    "vite": "^6.3.5"
+  },
+  "keycloakify": {
+    "themeName": "justregular-dark",
+    "accountThemeImplementation": "none"
+  }
+}
