@@ -5,12 +5,14 @@ import type { I18n } from "../i18n";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/shared/components/Card";
 import { Button } from "@/shared/components/Button";
 import { Input } from "@/shared/components/Input";
-import { LogIn } from "lucide-react";
+import { Key } from "lucide-react";
 
 export default function Login(
   props: PageProps<Extract<KcContext, { pageId: "login.ftl" }>, I18n>
 ) {
-  const { kcContext, i18n } = props;
+  const { kcContext, i18n, Template: _Template, doUseDefaultCss: _doUseDefaultCss } = props;
+  void _Template;
+  void _doUseDefaultCss;
   const { realm, url, usernameHidden, login, registrationDisabled, messagesPerField } = kcContext;
   const { msg, msgStr } = i18n;
 
@@ -41,7 +43,7 @@ export default function Login(
         <CardHeader className="space-y-1 text-center">
           <div className="flex items-center justify-center mb-4">
             <div className="p-3 rounded-full bg-secondary">
-              <LogIn className="h-8 w-8 text-foreground" />
+              <Key className="h-8 w-8 text-foreground" />
             </div>
           </div>
           <CardTitle>{msg("loginAccountTitle")}</CardTitle>

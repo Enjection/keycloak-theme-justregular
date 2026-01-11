@@ -5,7 +5,14 @@ import { keycloakify } from "keycloakify/vite-plugin";
 import path from "path";
 
 export default defineConfig({
-  plugins: [react(), tailwindcss(), keycloakify()],
+  plugins: [
+    react(),
+    tailwindcss(),
+    keycloakify({
+      themeName: "justregular-dark",
+      accountThemeImplementation: "none",
+    }),
+  ],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
